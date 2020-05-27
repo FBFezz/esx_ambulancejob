@@ -19,7 +19,7 @@ AddEventHandler('esx_ambulancejob:revive', function(playerId)
 				xPlayer.showNotification(_U('revive_complete_award', xTarget.name, Config.ReviveReward))
 				xPlayer.addMoney(Config.ReviveReward)
 				xTarget.triggerEvent('esx_ambulancejob:revive')
-				deadPlayers[playerId] = nil
+				deadPlayers[source] = nil
 			else
 				xPlayer.showNotification(_U('player_not_unconscious'))
 			end
